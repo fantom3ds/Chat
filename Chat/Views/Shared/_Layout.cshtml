@@ -9,10 +9,9 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <div class="SauronHeader">
-        <div class="Sauroneader-links">
-            @Html.ActionLink("Проект \"Саурон\"", "Index", "Home", null, new { @id = "HeadLink" })
-            @Html.ActionLink("Форум", "Index", "Forum", null, new { @id = "HeadLink" })
+    <div class="ChatHeader">
+        <div class="Chatheader-links">
+            @Html.ActionLink("Чатик Анны Сергеевны", "Index", "Home", null, new { @id = "HeadLink" })
         </div>
         @if (User.Identity.IsAuthenticated)
         {
@@ -30,20 +29,20 @@
                             <div><a href="#3">подпункт 3</a></div>
                         </div>
                     </div>
-                    <div class="UserSubMenuBtn">@Html.ActionLink("Выход", "Logout", "Account")</div>
+                    <div class="UserSubMenuBtn">@Html.ActionLink("Выход", "Logoff", "Account")</div>
                 </div>
             </div>
         }
         else
         {
-            <div class="Sauronheader-links">
+            <div class="UserLink">
                 @Html.ActionLink("Регистрация", "Register", "Account")
             </div>
 
         }
     </div>
 
-    <div class="CemeteryBody">
+    <div class="ChatContainer">
         @RenderBody()
         <hr />
         <footer>

@@ -15,9 +15,10 @@ namespace Chat.Migrations
                         Text = c.String(maxLength: 1000),
                         AuthorId = c.Int(nullable: false),
                         RecipientId = c.Int(nullable: false),
+                        Date = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Users", t => t.AuthorId, cascadeDelete: false)
+                .ForeignKey("dbo.Users", t => t.AuthorId, cascadeDelete:  false)
                 .ForeignKey("dbo.Users", t => t.RecipientId, cascadeDelete: false)
                 .Index(t => t.AuthorId)
                 .Index(t => t.RecipientId);
@@ -29,7 +30,7 @@ namespace Chat.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Login = c.String(nullable: false),
                         Password = c.Guid(nullable: false),
-                        DateOfBirth = c.DateTime(),
+                        DateOfBirth = c.DateTime(nullable: false),
                         DateRegister = c.DateTime(nullable: false),
                         FirstName = c.String(),
                         LastName = c.String(),

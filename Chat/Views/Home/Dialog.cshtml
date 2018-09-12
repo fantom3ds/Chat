@@ -1,0 +1,37 @@
+﻿@model Chat.Models.DialogModel
+
+@{
+    ViewBag.Title = "Dialog";
+}
+
+<h2>Dialog</h2>
+
+<div>
+    <h4>DialogModel</h4>
+
+    <table>
+        @foreach (var item in Model.Messages)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author.Login)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Text)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+@using (Html.BeginForm("SendMessage", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input name="mess_text" placeholder="Введите текст сообщения" class="textbox" type="text" required />
+    <input name="friend_id" type="hidden" value="@Model.Friend.Id"/>
+    <input name="my_id" type="hidden" value="@Model.Me.Id" />
+    <input class="button" type="submit" value="Отправить" />
+
+}

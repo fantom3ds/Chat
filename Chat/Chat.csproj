@@ -164,13 +164,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809061910295_Init.cs" />
-    <Compile Include="Migrations\201809061910295_Init.Designer.cs">
-      <DependentUpon>201809061910295_Init.cs</DependentUpon>
+    <Compile Include="Migrations\201809121542230_Init.cs" />
+    <Compile Include="Migrations\201809121542230_Init.Designer.cs">
+      <DependentUpon>201809121542230_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuthModel.cs" />
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\DialogModel.cs" />
+    <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\User.cs" />
@@ -186,6 +188,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Home\Dialog.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -194,8 +198,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809061910295_Init.resx">
-      <DependentUpon>201809061910295_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809121542230_Init.resx">
+      <DependentUpon>201809121542230_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

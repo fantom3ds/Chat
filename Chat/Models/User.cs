@@ -14,8 +14,10 @@ namespace Chat.Models
         [Required]
         public Guid Password { get; set; }
 
-        public DateTime? DateOfBirth { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd'/'MM'/'yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime DateOfBirth { get; set; }
         [Required]
+        [DisplayFormat(DataFormatString = "{0:dd'/'MM'/'yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateRegister { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

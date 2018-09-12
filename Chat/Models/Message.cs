@@ -14,12 +14,26 @@ namespace Chat.Models
         [Display(Name ="Текст сообщения")]
         public string Text { get; set; }
 
+        /// <summary>
+        /// Автор сообщения
+        /// </summary>
         [ForeignKey("Author")]
         public int AuthorId { get; set; }
+        /// <summary>
+        /// Автор сообщения
+        /// </summary>
         public User Author { get; set; }
 
+        /// <summary>
+        /// Получатель сообщения
+        /// </summary>
         [ForeignKey("Recipient")]
         public int RecipientId { get; set; }
+        /// <summary>
+        /// Получатель сообщения
+        /// </summary>
         public User Recipient { get; set; }
+
+        public DateTime Date { get; set; }
     }
 }

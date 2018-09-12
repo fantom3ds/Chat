@@ -13,7 +13,7 @@ namespace Chat.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201809061910295_Init"; }
+            get { return "201809121542230_Init"; }
         }
         
         string IMigrationMetadata.Source

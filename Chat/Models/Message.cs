@@ -18,7 +18,7 @@ namespace Chat.Models
         /// Автор сообщения
         /// </summary>
         [ForeignKey("Author")]
-        public int AuthorId { get; set; }
+        public int? AuthorId { get; set; }
         /// <summary>
         /// Автор сообщения
         /// </summary>
@@ -28,7 +28,7 @@ namespace Chat.Models
         /// Получатель сообщения
         /// </summary>
         [ForeignKey("Recipient")]
-        public int RecipientId { get; set; }
+        public int? RecipientId { get; set; }
         /// <summary>
         /// Получатель сообщения
         /// </summary>

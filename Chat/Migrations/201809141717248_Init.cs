@@ -13,13 +13,13 @@ namespace Chat.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Text = c.String(maxLength: 1000),
-                        AuthorId = c.Int(nullable: false),
-                        RecipientId = c.Int(nullable: false),
+                        AuthorId = c.Int(),
+                        RecipientId = c.Int(),
                         Date = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Users", t => t.AuthorId, cascadeDelete:  false)
-                .ForeignKey("dbo.Users", t => t.RecipientId, cascadeDelete: false)
+                .ForeignKey("dbo.Users", t => t.AuthorId)
+                .ForeignKey("dbo.Users", t => t.RecipientId)
                 .Index(t => t.AuthorId)
                 .Index(t => t.RecipientId);
             

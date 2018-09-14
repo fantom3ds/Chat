@@ -164,9 +164,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809121542230_Init.cs" />
-    <Compile Include="Migrations\201809121542230_Init.Designer.cs">
-      <DependentUpon>201809121542230_Init.cs</DependentUpon>
+    <Compile Include="Migrations\201809141717248_Init.cs" />
+    <Compile Include="Migrations\201809141717248_Init.Designer.cs">
+      <DependentUpon>201809141717248_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuthModel.cs" />
@@ -198,8 +198,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809121542230_Init.resx">
-      <DependentUpon>201809121542230_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809141717248_Init.resx">
+      <DependentUpon>201809141717248_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
